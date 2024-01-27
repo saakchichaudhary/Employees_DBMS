@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees Database Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="employees_details.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Employees_Details</h1>
+            <form id="record-form">
+                <input type="text" id="name" placeholder="Employee_Name" required>
+                <input type="text" id="position" placeholder="Position_in_Company" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="number" id="age" placeholder="Age" required>
+                <input type="text" id="email" placeholder="Email" required>
+                <button type="submit">Add Record</button>
+                <input type="hidden" id="edit-index" value="-1">
+            </form>
+        </div>
+        <div class="right">
+            <h2>Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee_Name</th>
+                        <th>Position_in_Company</th>
+                        <th>Address</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="record-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="employees_details.js"></script>
+</body>
+</html>
